@@ -40,17 +40,16 @@ func (a *Arith) Add(ar *Args, result *int) error {
 	return nil
 }
 
-
-func Server(){
+func Server() {
 	arith := new(Arith)
+
 	rpc.Register(arith)
 	rpc.HandleHTTP()
-	l,err := net.Listen( "tcp", ":1234")
+	l, err := net.Listen("tcp", ":1234")
 	if err != nil {
 		log.Fatal("listen error:", err)
 	}
 
-	go http.Serve(l,nil)
-
+	go http.Serve(l, nil)
 
 }
