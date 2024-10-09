@@ -24,6 +24,16 @@ func Client() {
 	if err != nil {
 		log.Fatal("arith server unavailable", err)
 	}
-	fmt.Printf("Arith: %d %d %d is", args.A, args.B, reply)
+	fmt.Printf("Arith: %d %d %d is \n", args.A, args.B, reply)
+
+	// Asynchronous call
+	quotient := new(server.Quotient)
+	divCall := client.Go("Arith.Divide",args,&quotient,nil)
+	replyCall := <- divCall.Done
+	if replyCall.Error != nil {
+		log.Fatal("arith server unavailable", replyCall.Error)
+		}
+		fmt.Printf("Arith: %d %d %d %d is", args.A, args.B,quotient.Quo,quotient.Rem)
+	
 
 }
