@@ -1,0 +1,21 @@
+package server
+
+
+
+type Args struct{
+	A,B int
+}
+
+type Quotient struct{
+	Quo, Rem int
+}
+
+type Arith  int
+
+
+func(a *Arith) Multiply(ar *Args, result *int)error{
+	*result =ar.A *ar.B
+	return nil
+}
+
+func(a *Arith) Divide
