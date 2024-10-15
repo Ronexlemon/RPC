@@ -1,4 +1,4 @@
-package server
+package itemserver
 
 import "fmt"
 
@@ -38,5 +38,29 @@ func EditItem(name string,item *Item)(*Item,error){
 }
 
 func ItemServer(){
+	fmt.Println("Server is running for Items")
+	item := Item{Name: "Golang",Price: 100.00}
+	item2 := Item{Name: "Python",Price: 200.00}
+	item3 := Item{Name: "Java",Price: 300.00}
+	itemForEdit := Item{Name: "Solidity",Price: 500.00}
+	CreateItem(&item)
+	CreateItem(&item2)
+	CreateItem(&item3)
+	fmt.Println("Database Items",Database)
+
+	editItem,err := EditItem("Java",&itemForEdit)
+	if err != nil{
+		fmt.Println(err)}
+		if editItem != nil{
+			fmt.Println("The Edited Item is",editItem)}
+		fmt.Println("Database Items after edit",Database)
+itemnew,err := GetItemByName("Golang")
+if err != nil{
+	fmt.Println(err)}
+	if itemnew != nil{
+		fmt.Println("The Item is",itemnew)}
+
+		fmt.Println("Database Items",Database)
+		
 
 }

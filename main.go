@@ -1,11 +1,14 @@
 package main
 
 import (
-	"gorpc/client"
-	"gorpc/server"
+	itemserver "gorpc/basic/server"
+	// "gorpc/client"
+	// "gorpc/server"
 )
 
 func main(){
-	server.Server()
-	client.Client()
+	// server.Server()
+	// client.Client()
+	itemserver.ItemServer()
+	
 }
