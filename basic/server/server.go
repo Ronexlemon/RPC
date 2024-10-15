@@ -26,6 +26,16 @@ func CreateItem(item *Item) (*Item, error) {
 	return item, nil
 }
 
+func EditItem(name string,item *Item)(*Item,error){
+	for index,value := range Database{
+		if value.Name == name{
+			
+			Database[index] = *item
+			return item, nil
+	}}
+	return nil, fmt.Errorf("item with name %s not found", name)
+
+}
 
 func ItemServer(){
 
