@@ -21,6 +21,7 @@ func Client() {
 	var reply int
 	err = client.Call("Arith.Multiply", args, &reply)
 
+
 	if err != nil {
 		log.Fatal("arith server unavailable", err)
 	}

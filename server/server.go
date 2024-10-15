@@ -44,6 +44,7 @@ func Server() {
 	arith := new(Arith)
 
 	rpc.Register(arith)
+	
 	rpc.HandleHTTP()
 	l, err := net.Listen("tcp", ":1234")
 	if err != nil {

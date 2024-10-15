@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+package proto
+
+option go_package = "github.com/golang/protobuf"
+
+message HelloRequest{
+    string first_name =1;
+}
+
+message HelloResponse{
+    string result =1;
+}
+
+service HelloService{
+    rpc Hello(HelloRequest) returns HelloResponse;
+}
