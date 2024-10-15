@@ -21,3 +21,12 @@ func GetItemByName(name string)(*Item,error){
 	}}
 	return nil, fmt.Errorf("item with name %s not found", name)
 }
+func CreateItem(item *Item) (*Item, error) {
+	Database = append(Database, *item)  
+	return item, nil
+}
+
+
+func ItemServer(){
+
+}
