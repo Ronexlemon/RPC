@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	AddService_Add_FullMethodName      = "/arithmeticserver.AddService/Add"
-	AddService_Multiply_FullMethodName = "/arithmeticserver.AddService/Multiply"
+	AddService_Add_FullMethodName      = "/arithmeticproto.AddService/Add"
+	AddService_Multiply_FullMethodName = "/arithmeticproto.AddService/Multiply"
 )
 
 // AddServiceClient is the client API for AddService service.
@@ -142,7 +142,7 @@ func _AddService_Multiply_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AddService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "arithmeticserver.AddService",
+	ServiceName: "arithmeticproto.AddService",
 	HandlerType: (*AddServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

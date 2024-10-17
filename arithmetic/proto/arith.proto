@@ -1,5 +1,5 @@
 syntax = "proto3";
-package arithmeticserver;
+package arithmeticproto;
 option go_package = "github.com/golang/protobuf";
 
 
