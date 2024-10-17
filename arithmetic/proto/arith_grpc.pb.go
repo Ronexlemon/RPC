@@ -65,7 +65,7 @@ func (c *addServiceClient) Multiply(ctx context.Context, in *Request, opts ...gr
 type AddServiceServer interface {
 	Add(context.Context, *Request) (*Response, error)
 	Multiply(context.Context, *Request) (*Response, error)
-	mustEmbedUnimplementedAddServiceServer()
+	//mustEmbedUnimplementedAddServiceServer()
 }
 
 // UnimplementedAddServiceServer must be embedded to have
