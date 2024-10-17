@@ -1,5 +1,6 @@
 syntax = "proto3";
 package arithmeticserver;
+option go_package = "github.com/golang/protobuf";
 
 
 message Request{
@@ -13,5 +14,6 @@ message Response{
 
 service AddService{
     rpc Add(Request) returns (Response);
+    rpc Multiply(Request) returns (Response);
 }
 
