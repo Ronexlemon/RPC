@@ -16,7 +16,7 @@ func ClientBasic(){
 	item2 := itemserver.Item{Name: "Python",Price: 200.00}
 	item3 := itemserver.Item{Name: "Java",Price: 300.00}
 	itemForEdit := itemserver.Item{Name: "Solidity",Price: 500.00}
-	itemForEdit2 := itemserver.Item{Name: "Solidity",Price: 500.00}
+	//itemForEdit2 := itemserver.Item{Name: "Solidity",Price: 500.00}
 
 	client,err := rpc.DialHTTP( "tcp", "localhost:9090")
 	fmt.Println("dialing .......")
