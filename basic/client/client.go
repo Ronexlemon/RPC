@@ -20,6 +20,7 @@ func ClientBasic(){
 
 	client,err := rpc.DialHTTP( "tcp", "localhost:9090")
 	fmt.Println("dialing .......")
+	fmt.Println("dialing .......")
 	if err != nil {
 		log.Fatal("Error dialing",err)}
 	defer client.Close()
