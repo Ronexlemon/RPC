@@ -27,6 +27,7 @@ func ClientBasic(){
 	 client.Call("API.CreateItem",&item,&reply)
 	 client.Call("API.CreateItem",&item3,&reply)
 	 client.Call("API.CreateItem",&item2,&reply)
+	 client.Call("API.CreateItem",&item2,&reply)
 	 client.Call("API.GetDB","",&db)
 	 fmt.Println("database",db)
 	 client.Call("API.EditItem",&itemForEdit,&reply)
